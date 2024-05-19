@@ -1,0 +1,12 @@
+(defun config-visit ()
+  (interactive)
+  (message "%s" config-files)
+  (find-file (completing-read "Select config file: " config-files)))
+
+(defun select-random-from-list (items)
+  (let* ((size (length items))
+	 (index (random size)))
+    (nth index items)))
+
+
+

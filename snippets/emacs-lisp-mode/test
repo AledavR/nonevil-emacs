@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: test
+# key: ts
+# --
+
+(setq ${1:variable} ${2:nononono} ${1})

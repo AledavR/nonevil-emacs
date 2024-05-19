@@ -1,0 +1,5 @@
+# key: cdb
+# name: create_db
+# --
+create database TB_${1:DB_NAME$(upcase yas-text)};
+use TB_$1;
