@@ -35,7 +35,7 @@
   ;; (setq-default display-line-numbers-type 'visual)
   (setq-default display-line-numbers-width 3)
   (setq-default display-line-numbers-grow-only t)
-  (load-theme 'modus-operandi-tinted t)
+  ;; (load-theme 'modus-operandi-tinted t)
   (add-to-list 'default-frame-alist `(font . ,default-font))
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 

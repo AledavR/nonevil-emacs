@@ -11,6 +11,7 @@
 (load-el "lib/rca-macros.el")
 (load-el "lib/rca-file-defuns.el")
 (load-el "lib/rca-list-defuns.el")
+(load-el "lib/rca-misc-defuns.el")
 (load-el "lib/rca-variables.el")
 
 ;; Modules
