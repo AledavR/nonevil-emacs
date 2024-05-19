@@ -55,6 +55,8 @@
     ("Basic"
      (("n" display-line-numbers-mode "line number" :toggle t)
       ("w" whitespace-mode "whitespace" :toggle t)
+      ("c" display-fill-column-indicator-mode "column limit" :toggle t)
+      ("t" tab-bar-mode :toggle t)
       ;; ("W" whitespace-cleanup-mode "whitespace cleanup" :toggle t)
       ;; ("r" rainbow-mode "rainbow" :toggle t)
       ;; ("L" page-break-lines-mode "page break lines" :toggle t))
@@ -89,3 +91,5 @@
      ("l" text-scale-decrease "-"))))
 
   )
+
+
