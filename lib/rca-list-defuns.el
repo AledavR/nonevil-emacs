@@ -1,4 +1,4 @@
-(defun append-str-to-list (string list &optional position)
+(defun rc/list-append-str (string list &optional position)
   "Appends a string to each element of a list.
 If POSITION is nil appends to the beginning of each element."
   (mapcar (lambda (element)
@@ -7,14 +7,13 @@ If POSITION is nil appends to the beginning of each element."
 	      (concat string element)))
 	  list))
 
-(defun merge-sublists (list)
+(defun rc/list-merge-sublists (list)
   "Merge all the sublists in a list"
   (let (value)
     (dolist (elt list value)
       (setq value (append value elt)))))
 
-
-(defun select-random-from-list (items)
+(defun rc/list-select-random (items)
   "Selects a random element from a list"
   (let* ((size (length items))
 	 (index (random size)))

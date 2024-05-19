@@ -14,15 +14,13 @@
 (setq recentf-directory
       (concat temporal-directory "recentf"))
 (setq config-files-dirs '("" "mod/" "ext/" "lib/"))
-;;(setq config-files(
-;;      (directory-files-recursively user-emacs-directory "^rca.*el$"))
 (setq banner-images
       (directory-files (concat user-emacs-directory "img/") t ".*g$"))
 
 (setq config-files
-      (merge-sublists
+      (rc/list-merge-sublists
        (mapcar (lambda (dir)
-		 (append-str-to-list
-		  dir (get-el-files
+		 (rc/list-append-str
+		  dir (rc/file-get-el
 		       (concat user-emacs-directory dir))))
 	       config-files-dirs)))

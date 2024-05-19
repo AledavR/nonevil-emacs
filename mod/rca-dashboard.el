@@ -13,7 +13,7 @@
   :custom
   (dashboard-center-content t)
   (dashboard-items nil)
-  (dashboard-startup-banner `(,(init-dir "img/tsukasa.png"))) 
+  (dashboard-startup-banner `(,(init-dir "img/remilia.png"))) 
   ;; (dashboard-startup-banner `(,(select-random-from-list banner-images))) 
   ;; (dashboard-image-banner-max-height 520)
   (dashboard-image-banner-max-height 550)

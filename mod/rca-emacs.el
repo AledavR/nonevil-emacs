@@ -1,7 +1,7 @@
 (use-package emacs
   :ensure nil
 
-  :bind (("C-x j" . config-visit)
+  :bind (("C-x j" . rc/file-find-config)
 	 ("C-x R" . consult-recent-file)
 	 ("C-x C-k C-x C-k" . kill-emacs)
 	 ("C-x B" . buffer-menu))
@@ -13,6 +13,7 @@
   (auto-save-list-file-prefix nil)
   (inhibit-initial-startup-message t)
   (ring-bell-function 'ignore)
+  (column-number-mode t)
   (use-dialog-box nil)
   (auto-save-default nil)
   (auto-save-interval 200)
