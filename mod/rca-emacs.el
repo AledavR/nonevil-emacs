@@ -4,7 +4,15 @@
   :bind (("C-x j" . rc/file-find-config)
 	 ("C-x R" . consult-recent-file)
 	 ("C-x C-k C-x C-k" . kill-emacs)
-	 ("C-x B" . buffer-menu))
+	 ("C-x B" . buffer-menu)
+	 ("M-z" . zap-up-to-char)
+	 ("C-z" . nil)
+	 ("C-x C-z" . nil)
+	 ("C-x C-c" . nil)
+	 ("C-h h" . nil)
+	 ("M-`" . nil)
+	 ("<insert>" . nil)
+	 ("<menu>" . nil))
 
   :custom
   ;; (initial-buffer-choice t)
