@@ -30,6 +30,7 @@
   (recentf-exclude history-excluded-filetypes)
   (frame-resize-pixelwise t)
   (x-select-enable-clipboard t)
+  (read-file-name-completion-ignore-case t)
 
   :config
   (scroll-bar-mode -1)
@@ -43,8 +44,6 @@
   ;; (setq-default display-line-numbers-type 'visual)
   (setq-default display-line-numbers-width 3)
   (setq-default display-line-numbers-grow-only t)
-  ;; (load-theme 'modus-operandi-tinted t)
-  (add-to-list 'default-frame-alist `(font . ,default-font))
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 
 (use-package server
@@ -52,3 +51,24 @@
   :config
   (unless (server-running-p)
     (server-start)))
+
+(use-package mhtml-mode
+  :ensure nil
+  :defer t
+  :preface
+  (defun sgml-delete-tagged-text ()
+  "Delete text between the tags that contain the current point"
+  (interactive)
+  (let ((b (point)))
+    (sgml-skip-tag-backward 1)
+    (when (not (eq b (point)))
+      ;; moved somewhere, should be at front of a tag now
+      (save-excursion 
+        (forward-sexp 1)
+        (setq b (point)))
+      (sgml-skip-tag-forward 1)
+      (backward-sexp 1)
+      (delete-region b (point))
+      (meow-insert))))
+  :config
+  (define-key mhtml-mode-map (kbd "C-c C-i") 'sgml-delete-tagged-text))

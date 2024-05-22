@@ -1,4 +1,3 @@
-
 (use-package hydra
   :ensure t)
 
@@ -82,7 +81,7 @@
       ("X" toggle-debug-on-quit "debug on quit"
        :toggle (default-value 'debug-on-quit)))))
 
-  (global-set-key (kbd "C-c C-t") 'rc/toggles/body)
+  (global-set-key (kbd "C-z C-t") 'rc/toggles/body)
 
   (pretty-hydra-define rc/zoom
     (global-map "<f2>" :title nil)
@@ -91,5 +90,3 @@
      ("l" text-scale-decrease "-"))))
 
   )
-
-

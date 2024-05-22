@@ -112,3 +112,6 @@
       my/org-idea-template-with-file
       :empty-lines 1)
      )))
+
+(use-package htmlize
+  :ensure t)

@@ -22,5 +22,13 @@
   :hook
   (before-make-frame . rc/theme-check-time)
   :init
+  (set-face-attribute 'default nil
+		      :family default-font
+		      :height 110)
+  (set-face-attribute 'italic nil
+		      :family default-font
+		      :height 110)
   (defvar rc/current-theme-dark-p (not (rc/time-is-day)))
-  (rc/theme-check-time))
+  (rc/theme-check-time)
+  :custom
+  (modus-themes-italic-constructs t))
