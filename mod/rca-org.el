@@ -5,9 +5,14 @@
   (org-todo-keywords '((sequence "IDEA" "TODO" "|" "DONE" "DROP")))
   (org-agenda-files '("~/Dropbox/org"))
   (org-log-done 'time)
+  (org-confirm-babel-evaluate nil)
   (org-highlight-latex-and-related '(latex script entities))
   :config
   (setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)
+     (octave . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images)
   (add-hook 'org-babel-after-execute-hook 'org-toggle-inline-images))
 
