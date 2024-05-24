@@ -32,6 +32,7 @@
   (x-select-enable-clipboard t)
   (read-file-name-completion-ignore-case t)
 
+
   :config
   (scroll-bar-mode -1)
   (tool-bar-mode -1)

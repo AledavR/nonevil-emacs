@@ -15,11 +15,21 @@
   :custom
   (corfu-min-width 50)
   (corfu-max-width 50)
+  (corfu-on-exact-match nil)
   (corfu-auto-prefix 2)
   (corfu-separator ?\s)
   (corfu-auto t)
   (corfu-cycle t)
   (corfu-quit-no-match 'separator))
+
+(use-package kind-icon
+  :ensure t
+  :after corfu
+  :custom
+  (kind-icon-blend-background t)
+  (kind-icon-default-face 'corfu-default) ; only needed with blend-background
+  :config
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 
 (use-package emacs
@@ -33,6 +43,12 @@
   (add-to-list 'completion-at-point-functions #'cape-dabbrev)
   (add-to-list 'completion-at-point-functions #'cape-file)
   (add-to-list 'completion-at-point-functions #'cape-elisp-block))
+
+(use-package yasnippet-capf
+  :after cape
+  :ensure t
+  :config
+  (add-to-list 'completion-at-point-functions #'yasnippet-capf))
 
 (use-package dabbrev
   ;; Swap M-/ and C-M-/

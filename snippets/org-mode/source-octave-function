@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: source-octave-function
+# expand-env: ((yas-indent-line 'fixed))
+# key: <sof
+# --
+
+#+name: ${1:f_name} 
+#+begin_src octave :results silent ${2::session octave}
+$>function [${3:ret_val}] = ${1}(${4:vars})$0
+$>end
+#+end_src

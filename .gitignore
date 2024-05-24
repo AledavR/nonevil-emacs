@@ -8,3 +8,4 @@ temporal/
 transient/
 /tramp
 *~
+/.cache/
