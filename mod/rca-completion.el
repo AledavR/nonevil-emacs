@@ -8,13 +8,19 @@
 
 (use-package corfu
   :ensure t
+  :bind
+  (:map corfu-map ("S-SPC" . corfu-insert-separator))
   :init
   (global-corfu-mode)
   :custom
-  (corfu-min-width 30)
-  (corfu-max-width 30)
+  (corfu-min-width 50)
+  (corfu-max-width 50)
+  (corfu-auto-prefix 2)
+  (corfu-separator ?\s)
   (corfu-auto t)
+  (corfu-cycle t)
   (corfu-quit-no-match 'separator))
+
 
 (use-package emacs
   :init
