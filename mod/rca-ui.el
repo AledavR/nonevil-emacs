@@ -10,26 +10,22 @@
   (defun rc/toggle-theme-light-dark ()
     (interactive)
     (if rc/current-theme-dark-p
-	(progn (load-theme rc/light-theme)
-	       (setq rc/current-theme-dark-p nil))
-      (load-theme rc/dark-theme)
-      (setq rc/current-theme-dark-p t)))
-  
+	(load-theme rc/light-theme) (load-theme rc/dark-theme))
+    (toggle-p rc/current-theme-dark-p))
+
   (defun rc/theme-check-time ()
-    (if (rc/time-is-day)
-	(progn (load-theme rc/light-theme)
-	       (setq rc/current-theme-dark-p nil))
-      (load-theme rc/dark-theme)
-      (setq rc/current-theme-dark-p t)))
+    (let (is-day (rc/time-is-day))
+      (if is-day (load-theme rc/light-theme) (load-theme rc/dark-theme))
+      (setq rc/current-theme-dark-p (not is-day))))
   :hook
   (before-make-frame . rc/theme-check-time)
   :init
   (set-face-attribute 'default nil
 		      :family default-font
 		      :height 110)
+		      
   (set-face-attribute 'italic nil
-		      :family default-font
-		      :height 110)
+		      :family default-font)
   (defvar rc/current-theme-dark-p (not (rc/time-is-day)))
   (rc/theme-check-time)
   :custom
