@@ -8,6 +8,12 @@
   (org-confirm-babel-evaluate nil)
   (org-highlight-latex-and-related '(latex script entities))
   :config
+  (setq modus-themes-headings
+      '((1 . (1.5))
+        (2 . (1.3))
+        (agenda-date . (1.3))
+        (agenda-structure . (variable-pitch light 1.8))
+        (t . (1.1))))
   (setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
   (org-babel-do-load-languages
    'org-babel-load-languages

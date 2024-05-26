@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: not_exist_init
+# key: nex
+# --
+
+if ~exist('${1:var_name}', 'var')
+   var_name = $0;
+end

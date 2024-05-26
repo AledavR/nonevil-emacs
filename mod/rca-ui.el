@@ -14,9 +14,10 @@
     (toggle-p rc/current-theme-dark-p))
 
   (defun rc/theme-check-time ()
-    (let (is-day (rc/time-is-day))
+    (let ((is-day (rc/time-is-day)))
       (if is-day (load-theme rc/light-theme) (load-theme rc/dark-theme))
       (setq rc/current-theme-dark-p (not is-day))))
+  
   :hook
   (before-make-frame . rc/theme-check-time)
   :init
@@ -25,6 +26,7 @@
 		      :height 110)
 		      
   (set-face-attribute 'italic nil
+		      :height 110
 		      :family default-font)
   (defvar rc/current-theme-dark-p (not (rc/time-is-day)))
   (rc/theme-check-time)
