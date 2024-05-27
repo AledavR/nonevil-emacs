@@ -43,6 +43,10 @@
   ;; (setq-default display-line-numbers-type 'visual)
   (setq-default display-line-numbers-width 3)
   (setq-default display-line-numbers-grow-only t)
+  (setq-default custom-file
+		(expand-file-name "custom.el" user-emacs-directory))
+  (when (file-exists-p custom-file)
+    (load custom-file))
   (add-to-list 'default-frame-alist '(fullscreen . maximized)))
 
 (use-package server

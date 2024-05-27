@@ -3,10 +3,19 @@
 (setq history-excluded-filetypes '(".*gz"
 				   ".*pdf"
 				   "bookmarks"
+				   "recentf"
+				   "init.el"
+				   ".*gitignore"
+				   "early-init.el"
 				   ".*log"
 				   ".*png"
 				   ".*jpg"
 				   ".*gif"
+				   ".*agenda.org"
+				   ".*ideas.org"
+				   ".*mod/.*"
+				   ".*lib/.*"
+				   ".*ext/.*"
 				   ".*_db"))
 
 (setq temporal-directory

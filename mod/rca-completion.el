@@ -64,3 +64,9 @@
 (use-package smartparens
   :ensure t)
 
+(use-package flyspell
+  :config
+  (setq ispell-program-name "hunspell"
+	ispell-personal-dictionary "~/Dropbox/dict/hunspell_es"
+	ispell-dictionary "es")
+  :hook (text-mode . flyspell-mode))

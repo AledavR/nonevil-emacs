@@ -26,14 +26,12 @@
   (defun rc/theme-toggle-light-dark ()
     (interactive)
     (rc/theme-change rc/theme-is-dark)
-    (toggle-p rc/theme-is-dark)
-    (setq rc/theme-custom-defined t))
+    (toggle-p rc/theme-is-dark))
 
   (defun rc/theme-check-time ()
-    (if (not rc/theme-custom-defined)
     (let ((is-day (rc/time-is-day)))
       (rc/theme-change is-day)
-      (setq rc/theme-is-dark (not is-day)))))
+      (setq rc/theme-is-dark (not is-day))))
   
   (defvar after-enable-theme-hook nil)
   (defun run-after-enable-theme-hook (&rest _args)
@@ -49,7 +47,6 @@
   (set-face-attribute 'italic nil
 		      :family default-font)
   (defvar rc/theme-is-dark (not (rc/time-is-day)))
-  (setq rc/theme-custom-defined nil)
   (rc/theme-check-time)
   :custom
   (modus-themes-italic-constructs t))

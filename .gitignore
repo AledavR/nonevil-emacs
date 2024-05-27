@@ -9,3 +9,4 @@ transient/
 /tramp
 *~
 /.cache/
+custom.el
