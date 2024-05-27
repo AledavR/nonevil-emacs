@@ -29,8 +29,8 @@
   (kind-icon-blend-background t)
   (kind-icon-default-face 'corfu-default) ; only needed with blend-background
   :config
+  (add-hook 'after-enable-theme-hook  #'kind-icon-reset-cache)
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
-
 
 (use-package emacs
   :init

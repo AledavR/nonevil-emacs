@@ -13,7 +13,6 @@
 (load-el "lib/rca-list-defuns.el")
 (load-el "lib/rca-misc-defuns.el")
 (load-el "lib/rca-variables.el")
-
 ;; Modules
 (load-el "mod/rca-emacs.el")
 (load-el "mod/rca-ui.el")

@@ -106,3 +106,9 @@
   ;; (add-to-list 'meow-char-thing-table '(?t . html-tag))
   (meow-setup)
   (meow-global-mode 1))
+
+(use-package undo-tree
+  :ensure t
+  :diminish
+  :config
+  (global-undo-tree-mode))

@@ -1,7 +1,7 @@
 (use-package emacs
   :ensure nil
 
-  :bind (("C-x j" . rc/file-find-config)
+ :bind (("C-x j" . rc/file-find-config)
 	 ("C-x R" . consult-recent-file)
 	 ("C-x C-k C-x C-k" . kill-emacs)
 	 ("C-x B" . buffer-menu)
@@ -13,7 +13,6 @@
 	 ("M-`" . nil)
 	 ("<insert>" . nil)
 	 ("<menu>" . nil))
-
   :custom
   ;; (initial-buffer-choice t)
   (recentf-save-file recentf-directory)
@@ -31,7 +30,6 @@
   (frame-resize-pixelwise t)
   (x-select-enable-clipboard t)
   (read-file-name-completion-ignore-case t)
-
 
   :config
   (scroll-bar-mode -1)

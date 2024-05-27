@@ -5,6 +5,8 @@
     (define-key
      dashboard-mode-map (kbd "q") 'dashboard-refresh-buffer))
   :hook
+  (elpaca-after-init . dashboard-insert-startupify-lists)
+  (elpaca-after-init . dashboard-initialize)
   (dashboard-mode . protect-dashboard)
   (dashboard-after-initialize . dashboard-refresh-buffer)
   :custom

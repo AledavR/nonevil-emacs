@@ -68,8 +68,8 @@
       ;; ("t" hl-todo-mode "todo" :toggle t))
       )
      "UI"
-     (("d" rc/toggle-theme-light-dark "dark theme"
-       :toggle rc/current-theme-dark-p))
+     (("d" rc/theme-toggle-light-dark "dark theme"
+       :toggle rc/theme-is-dark))
      "Coding"
      (("p" smartparens-mode "smartparens" :toggle t)
       ("P" smartparens-strict-mode "smartparens strict" :toggle t)
