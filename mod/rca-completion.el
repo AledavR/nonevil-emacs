@@ -16,7 +16,7 @@
   (corfu-min-width 50)
   (corfu-max-width 50)
   (corfu-on-exact-match nil)
-  (corfu-auto-prefix 2)
+  (corfu-auto-prefix 4)
   (corfu-separator ?\s)
   (corfu-auto t)
   (corfu-cycle t)
