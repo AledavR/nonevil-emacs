@@ -24,6 +24,9 @@
 (setq backup-directory
       (concat temporal-directory "saves"))
 
+(setq undo-history-directory
+      (concat temporal-directory "undohist"))
+
 (setq recentf-directory
       (concat temporal-directory "recentf"))
 

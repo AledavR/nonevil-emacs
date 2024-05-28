@@ -111,4 +111,6 @@
   :ensure t
   :diminish
   :config
+  (setq undo-tree-history-directory-alist
+	`(("." . ,undo-history-directory)))
   (global-undo-tree-mode))
